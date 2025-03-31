@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./Header.module.css";
-import { addImage, dateSort, nameSort } from "./store/redux-store";
+import { addImage, dateSort, nameSort, toggleTheme } from "./store/redux-store";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
   const dispatch = useDispatch();
   const [preview, setPreview] = useState(null);
 
@@ -60,6 +61,13 @@ const Header = () => {
             <option value="name">By Name</option>
             <option value="date">By Date</option>
           </select>
+        </li>
+        <li
+          onClick={() => dispatch(toggleTheme())}
+          role="button"
+          style={{ cursor: "pointer", listStyle: "none", padding: "10px" }}
+        >
+          {isDarkMode ? "🌙 Dark Mode" : "☀️ Light Mode"}
         </li>
       </ul>
       {/* {preview && (

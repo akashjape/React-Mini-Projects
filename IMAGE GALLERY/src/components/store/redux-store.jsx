@@ -1,4 +1,5 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { useState } from "react";
 
 const data = [
   {
@@ -45,11 +46,24 @@ const imageSlice = createSlice({
   },
 });
 
+const themeSlice = createSlice({
+  name: "theme",
+  initialState: { isDarkMode: false },
+  reducers: {
+    toggleTheme: (state) => {
+      console.log("Toggled");
+      state.isDarkMode = !state.isDarkMode;
+    },
+  },
+});
+
 const store = configureStore({
   reducer: {
     image: imageSlice.reducer,
+    theme: themeSlice.reducer,
   },
 });
 
 export const { nameSort, dateSort, addImage, toggleLike } = imageSlice.actions;
+export const { toggleTheme } = themeSlice.actions;
 export default store;
