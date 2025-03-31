@@ -1,0 +1,39 @@
+.header{
+  background-color: #222;
+  height : 120px;
+  color: antiquewhite;
+}
+
+h1{
+  text-align: center;
+
+}
+.headerOption{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  list-style-type: none;
+  gap : 1.5rem;
+  flex-wrap: wrap;
+}
+
+li > select{
+  margin-left: 1rem;
+}
+
+
+@media screen and (max-width : 450px) {
+
+  .header{
+    width: 100%;
+  }
+  li > select{
+    margin-left: 0rem;
+    width: auto;
+  }
+  .headerOption{
+    gap: 0.5rem;
+  }
+  
+}

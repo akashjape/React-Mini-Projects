@@ -1,0 +1,22 @@
+body, html{
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container{
+  display: flex;
+  flex-direction: column;
+}
+/* styles.css */
+.custom-link {
+  color: antiquewhite;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: inline-block; /* Prevents layout shift */
+}
+
+.custom-link:hover {
+  color: white; /* Slightly different color for a better effect */
+  transform: scale(1.1);
+}
+
