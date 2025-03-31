@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://akashjape.github.io/React-Mini-Projects/IMAGE%20GALLERY",
+  "homepage": "https://akashjape.github.io/React-Mini-Projects/IMAGE_GALLERY",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
